@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    color: gainsboro;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+    background-image: url('../images/texture-2613518_1920.jpg');
+    background-attachment: fixed;
+}
+div {
+    padding: 10px;
+}
+h1, h2, h3, h4 {
+    font-family: 'Fjalla One', sans-serif;
+}
+p {
+    font-family: 'Cantarell', sans-serif;
+}
+.container {
+}
+.welcome {
+    text-align: center;
+    height: 10%;
+    font-size: 3rem;
+}
+.about {
+    background-color: rgba(107, 177, 177, 0.75);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.about:hover {
+    background-color: rgba(107, 177, 177, 0.9);
+}
+.experience {
+    background-color: rgba(111, 120, 178, 0.75);
+}
+.experience:hover {
+    background-color: rgba(111, 120, 178, 0.9);
+}
+.projects {
+    background-color: rgba(164, 94, 185, 0.75);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.projects:hover {
+    background-color: rgba(164, 94, 185, 0.9);
+
+}
+.about, .experience, .projects {
+    transition: 1.3s;
+}
+
