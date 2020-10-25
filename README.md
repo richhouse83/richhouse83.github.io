@@ -1,1 +1,1 @@
-Readme fo the portfolio
+Readme for the portfolio
