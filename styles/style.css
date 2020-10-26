@@ -20,6 +20,14 @@ h1, h2, h3, h4 {
 p {
     font-family: 'Cantarell', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: gainsboro;
+    transition: 0.5s;
+}
+a:hover {
+    color: rgb(128, 191, 255);
+}
 .container {
 }
 .welcome {
@@ -49,6 +57,12 @@ p {
 .projects:hover {
     background-color: rgba(164, 94, 185, 0.9);
 
+}
+.demopics {
+    width: 20rem;
+}
+.demopics:hover {
+    border: snow solid 1px;
 }
 .about, .experience, .projects {
     transition: 1.3s;
