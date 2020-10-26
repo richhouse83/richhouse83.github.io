@@ -28,8 +28,6 @@ a {
 a:hover {
     color: rgb(128, 191, 255);
 }
-.container {
-}
 .welcome {
     text-align: center;
     height: 10%;
@@ -60,9 +58,11 @@ a:hover {
 }
 .demopics {
     width: 20rem;
+    opacity: 0.8;
+    transition: 0.5s;
 }
 .demopics:hover {
-    border: snow solid 1px;
+    opacity: 1;
 }
 .about, .experience, .projects {
     transition: 1.3s;
