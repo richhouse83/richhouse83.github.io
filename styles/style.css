@@ -8,7 +8,7 @@ html {
 body {
     width: 80%;
     margin: 0 auto;
-    background-image: url('../images/texture-2613518_1920.jpg');
+    background-image: url('../images/background\ website\ 1\ \ \ Zellox.gif');
     background-attachment: fixed;
 }
 div {
@@ -27,6 +27,28 @@ a {
 }
 a:hover {
     color: rgb(128, 191, 255);
+}
+.intro {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:  repeat(10, 1fr);
+}
+.introbutton {
+    grid-area: 5 / 4 / span 1 / span 1;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid snow;
+    color: snow;
+    margin: auto;
+    border-radius: 3px;
+}
+.introbutton:hover {
+    color: slategray;
+    border: 2px solid slategray;
+    transition: 0.7s ease;
 }
 .welcome {
     text-align: center;
