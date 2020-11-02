@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     background-image: url('../images/background\ website\ 1\ \ \ Zellox.gif');
     background-attachment: fixed;
+    position: relative;
 }
 div {
     padding: 10px;
@@ -22,26 +23,49 @@ p {
 a {
     text-decoration: none;
     color: gainsboro;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 a:hover {
     color: rgb(128, 191, 255);
 }
-.navbar {
+.navbar, .contact {
     width: 100%;
     height: 35px;
     background-color: snow;
     color: slategray;
-    text-align: right;
     font-family: 'Canterell', sans-serif;
     position: fixed;
     z-index: 10;
 }
-.navbar a {
+.navbar {
+    text-align: right;
+}
+.navbar a, .contact a {
     color: slategray;
 }
-.navbar a:hover {
+.navbar a:hover, .contact a:hover {
     color: rgb(128, 191, 255); 
+}
+.contact {
+    padding-top: 5px;
+    bottom: 0px;
+    transition: height 0.3s, font-size 0.2s ease 0.2s, text-align 0.3s;
+}
+.contact p {
+    display: inline;
+}
+.contact:hover {
+    height: 35%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.contact:hover p {
+    display: block;
+    line-height: 1rem;
+}
+.mobilecontact {
+    visibility: hidden;
+    position: fixed;
 }
 .container {
     position: relative;
@@ -55,6 +79,7 @@ a:hover {
     'projects projects projects'
     'projects projects projects';
     grid-gap: 10px;
+    padding-bottom: 40px;
 }
 .welcome {
     grid-area: welcome;
@@ -114,6 +139,24 @@ a:hover {
         "experience"
         "projects";
         grid-gap: 5px;
+    }
+    .contact {
+        text-align: center;
+    }
+    .contact p {
+        visibility: hidden;
+        position: fixed;
+    }
+    .contact:hover p {
+        visibility: visible;
+        position: relative;
+        font-size: 1rem;
+    }
+    .mobilecontact {
+        padding: 0px;
+        visibility: visible;
+        position: relative;
+        font-size: 1rem;
     }
     .welcome, .about, .experience, .projects {
         border-radius: 8px;
