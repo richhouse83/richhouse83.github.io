@@ -16,12 +16,30 @@
         <img
         id="mercury"
         src="images/mercury.jpg" />
-        <img 
-        id="jupiter"
-        src="images/jupiter.jpg"/>
+        <img
+        id="venus"
+        src="images/venus.jpg" />
         <img
         id="earth"
         src="images/earth.jpg"/>
+        <img
+        id="mars"
+        src="images/mars.jpg" />
+        <img 
+        id="jupiter"
+        src="images/jupiter.jpg" />
+        <img
+        id="saturn"
+        src="images/saturn.jpg" />
+        <img
+        id="ring"
+        src="images/ring2.png" />
+        <img
+        id="uranus"
+        src="images/uranus.jpg" />
+        <img
+        id="neptune"
+        src="images/neptune.jpg" />
         <img 
         id="sun"
         src="images/sun.jpg" />
@@ -30,23 +48,36 @@
       src="#sky"
       ></a-sky>
       <a-sphere
-      src="#mercury"
-      color="blue"
-      position= "0 0 -10"
-      radius='1.2'
+      color="white"
+      position= "2 2 -30"
+      radius='0.3'
       animation="property: object3D.rotation.y;
     to: 360;
-    dur: 15000;
+    dur: 5000;
     loop: true">
       </a-sphere>
       <a-sphere
-      color="gray"
-      position= "2 2 -10"
-      radius='0.3'>
+      src="#mercury"
+      position= "-10 0 -30"
+      radius='0.3'
+      animation="property: object3D.rotation.y;
+    to: 360;
+    dur: 5000;
+    loop: true;
+    easing: linear;">
+      </a-sphere>
+      <a-sphere
+      src="#venus"
+      position= "-5 0 -30"
+      radius='0.9'
+      animation="property: object3D.rotation.y;
+    to: 360;
+    dur: 5000;
+    loop: true">
       </a-sphere>
       <a-sphere
       src="#earth"
-      position= "-5 0 -10"
+      position= "0 0 -30"
       radius='1'
       animation="property: object3D.rotation.y;
     to: 360;
@@ -54,43 +85,61 @@
     loop: true">
       </a-sphere>
       <a-sphere
-      color="gray"
-      position= "-6 -2.5 -10"
-      radius='0.3'
+      src="#mars"
+      position= "5 0 -30"
+      radius='0.5'
       animation="property: object3D.rotation.y;
     to: 360;
-    dur: 30000;
+    dur: 15000;
     loop: true">
       </a-sphere>
       <a-sphere
       src="#jupiter"
-      position= "7 0 -10"
-      radius='3'
+      position= "20 0 -30"
+      radius='11'
       animation="property: object3D.rotation.y;
     to: 360;
     dur: 50000;
     loop: true">
       </a-sphere>
       <a-sphere
-      color="white"
-      position= "-10 0 -10"
-      radius='0.3'>
+      src="#saturn"
+      color="darkslategray";
+      position= "50 0 -30"
+      radius='9'
+      animation="property: object3D.rotation.y;
+    to: 360;
+    dur: 30000;
+    loop: true">
+    </a-sphere>
+    <a-ring
+    src="#ring"
+    opacity="0.8"
+    side="double"
+    position= "50 0 -30"
+    rotation="65 96 0"
+    radius-inner='10'
+    radius-outer='16'>
+    </a-ring>
+    <a-sphere
+      src="#uranus"
+      color="gray"
+      position= "75 0 -30"
+      radius='4'
+      animation="property: object3D.rotation.y;
+    to: 360;
+    dur: 30000;
+    loop: true">
       </a-sphere>
       <a-sphere
       src="#sun"
-      position= "-35 0 -10"
+      position= "-35 0 -30"
       radius='10'
       animation="property: object3D.rotation.y;
     to: 360;
     dur: 80000;
     loop: true">
       </a-sphere>
-      <a-light
-      type="point"
-      intensity="10"
-      position="-35 0 -10"
-      color="fbff00">
-      </a-light>
       <a-light
       type="point"
       intensity="3"
@@ -104,10 +153,16 @@
       color="#4b4949">
       </a-light>
       <a-text
-      value="Solar System Test"
+      value="Our Solar System"
       position="-8 5 -10"
       color="fbff00"
       scale="5 5 5"></a-text>
+      <a-entity camera 
+      look-controls 
+      wasd-controls="acceleration: 400" 
+      position="0 1.6 0">
+    </a-entity>
+
     </a-scene>
   </body>
 </html>
