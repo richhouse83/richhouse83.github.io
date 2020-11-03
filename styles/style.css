@@ -139,6 +139,9 @@ a:hover {
     }
 }
 @media only screen and (max-device-width: 900px), (max-width:900px) {
+    body {
+        font-size: 1.5rem;
+    }
     .container {
         width: 100%;
         grid-template-areas: 
@@ -187,7 +190,7 @@ a:hover {
         padding-top: 0px;
     }
     .welcome h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .contact p, .contact:hover p {
         font-size: 0.8rem;
