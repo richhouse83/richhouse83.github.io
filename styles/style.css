@@ -130,7 +130,7 @@ a:hover {
 .about, .experience, .projects, .welcome {
     transition: 1.3s, color 1.3s ease 0.5s;
 }
-@media only screen and (max-width: 900px), (orientation: portarit) {
+@media only screen and (max-width: 900px), (orientation: portrait) {
     .container {
         width: 98%;
         grid-template-areas: 
