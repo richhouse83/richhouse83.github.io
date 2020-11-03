@@ -55,7 +55,7 @@ a:hover {
     display: inline;
 }
 .contact:hover {
-    height: 35%;
+    height: 20%;
     text-align: center;
     font-size: 1.3rem;
 }
@@ -130,7 +130,7 @@ a:hover {
 .about, .experience, .projects, .welcome {
     transition: 1.3s, color 1.3s ease 0.5s;
 }
-@media only screen and (max-width: 900px), (orientation: portrait) {
+@media only screen and (orientation: portrait) {
     .container {
         width: 98%;
         grid-template-areas: 
@@ -140,23 +140,30 @@ a:hover {
         "projects";
         grid-gap: 5px;
     }
+    .navbar {
+        font-size: 3rem;
+    }
     .contact {
         text-align: center;
     }
     .contact p {
         visibility: hidden;
         position: fixed;
+        font-size: 3rem;
+    }
+    .contact:hover {
+        height: 20%;
     }
     .contact:hover p {
         visibility: visible;
         position: relative;
-        font-size: 1rem;
+        font-size: 3rem;
     }
     .mobilecontact {
         padding: 0px;
         visibility: visible;
         position: relative;
-        font-size: 1rem;
+        font-size: 3rem;
     }
     .welcome, .about, .experience, .projects {
         border-radius: 8px;
