@@ -121,7 +121,7 @@ a:hover {
 
 }
 .demopics {
-    width: 20rem;
+    width: 15rem;
     opacity: 0.8;
     transition: 0.5s;
 }
@@ -130,6 +130,13 @@ a:hover {
 }
 .about, .experience, .projects, .welcome {
     transition: 1.3s, color 1.3s ease 0.5s;
+}
+@media only screen and (min-width: 900px) {
+    .demopics:hover {
+        width: 16rem;
+        transform: rotate(-4deg);
+        box-shadow: -6px 6px #2c2c2c;
+    }
 }
 @media only screen and (max-width: 900px), (orientation: portrait) {
     .container {
