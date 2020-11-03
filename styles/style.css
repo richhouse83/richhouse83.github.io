@@ -31,7 +31,7 @@ a:hover {
 }
 .navbar, .contact {
     width: 100%;
-    height: 6%;
+    height: 0.8rem;
     background-color: snow;
     color: slategray;
     font-family: 'Canterell', sans-serif;
@@ -133,35 +133,35 @@ a:hover {
 }
 @media only screen and (max-width: 900px), (orientation: portrait) {
     .container {
-        width: 98%;
+        width: 100%;
         grid-template-areas: 
         "welcome"
         "about"
         "experience"
         "projects";
-        grid-gap: 5px;
-        padding: 2rem 0 0.5rem 0;
+        grid-gap: 0px;
+        padding: 2rem 0 0 0;
     }
     .navbar {
         font-size: 1.5rem;
         height: 2rem;
     }
-    .contact {
+    .contact, .contact:hover, .contact p, .contact:hover p {
         text-align: center;
-        height: 2rem;
+        height: 100%;
         position: relative;
-        font-size: 0.7rem;
+        font-size: 1.5rem;
+        line-height: 0.4rem;
+        padding-top: 6px;
+        display: block;
     }
-    .contact:hover {
-        height: 2rem;
+    .mobilecontact {
+        margin-top: 5px;
+        visibility: visible;
         position: relative;
-        padding-top: 9px
-    }
-    .contact:hover p {
-        display: inline;
     }
     .welcome, .about, .experience, .projects {
-        border-radius: 8px;
+        border-radius: 0px;
         text-align: center;
     }
     ul {
@@ -182,7 +182,7 @@ a:hover {
     .welcome h1 {
         font-size: 1rem;
     }
-    .contact p {
-        font-size: 0.5rem;
+    .contact p, .contact:hover p {
+        font-size: 0.8rem;
     }
 }
