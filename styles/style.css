@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 16px;
+    font-size: 32px;
     color: gainsboro;
 }
 body {
@@ -10,6 +10,7 @@ body {
     background-image: url('../images/background\ website\ 1\ \ \ Zellox.gif');
     background-attachment: fixed;
     position: relative;
+    font-size: 0.5rem;
 }
 div {
     padding: 10px;
@@ -55,13 +56,13 @@ a:hover {
     display: inline;
 }
 .contact:hover {
-    height: 20%;
+    height: 23%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 0.5rem;
 }
 .contact:hover p {
     display: block;
-    line-height: 1rem;
+    line-height: 0.3rem;
 }
 .mobilecontact {
     visibility: hidden;
@@ -130,7 +131,7 @@ a:hover {
 .about, .experience, .projects, .welcome {
     transition: 1.3s, color 1.3s ease 0.5s;
 }
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 900px), (orientation: portrait) {
     .container {
         width: 98%;
         grid-template-areas: 
@@ -139,31 +140,25 @@ a:hover {
         "experience"
         "projects";
         grid-gap: 5px;
+        padding: 2rem 0 0.5rem 0;
     }
     .navbar {
-        font-size: 3rem;
+        font-size: 1.5rem;
+        height: 2rem;
     }
     .contact {
         text-align: center;
-    }
-    .contact p {
-        visibility: hidden;
-        position: fixed;
-        font-size: 3rem;
+        height: 2rem;
+        position: relative;
+        font-size: 0.7rem;
     }
     .contact:hover {
-        height: 20%;
+        height: 2rem;
+        position: relative;
+        padding-top: 9px
     }
     .contact:hover p {
-        visibility: visible;
-        position: relative;
-        font-size: 3rem;
-    }
-    .mobilecontact {
-        padding: 0px;
-        visibility: visible;
-        position: relative;
-        font-size: 3rem;
+        display: inline;
     }
     .welcome, .about, .experience, .projects {
         border-radius: 8px;
@@ -175,4 +170,19 @@ a:hover {
         margin: 0 ;
     }
 
+}
+@media only screen and (max-width: 640px) {
+    .navbar, .demopics {
+        visibility: hidden;
+        position: fixed;
+    }
+    .container {
+        padding-top: 0px;
+    }
+    .welcome h1 {
+        font-size: 1rem;
+    }
+    .contact p {
+        font-size: 0.5rem;
+    }
 }
