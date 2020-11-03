@@ -131,14 +131,14 @@ a:hover {
 .about, .experience, .projects, .welcome {
     transition: 1.3s, color 1.3s ease 0.5s;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-device-width: 900px) {
     .demopics:hover {
         width: 16rem;
         transform: rotate(-4deg);
         box-shadow: -6px 6px #2c2c2c;
     }
 }
-@media only screen and (max-width: 900px), (orientation: portrait) {
+@media only screen and (max-device-width: 900px), (max-width:900px) {
     .container {
         width: 100%;
         grid-template-areas: 
@@ -178,7 +178,7 @@ a:hover {
     }
 
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 640px), (max-device-width: 320px) {
     .navbar, .demopics {
         visibility: hidden;
         position: fixed;
