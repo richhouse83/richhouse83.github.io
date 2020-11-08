@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 32px;
+    color: gainsboro;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    height: 100%;
+    position: relative;
+    background-image: url('../images/background\ website\ 1\ \ \ Zellox.gif');
+    background-attachment: fixed;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.splashContainer:hover {
+    width: 90%;
+    height: 95%;
+    grid-template-areas:
+    'top-left top-left top-right'
+    'bottom-left bottom-right bottom-right';
+    grid-gap: 2px;
+    transition: height 2s, width 2s 1.4s;
+}
+.splashContainer {
+    height: 5px;
+    width: 5px;
+    margin: auto;
+    border-radius: 12px;
+    display: grid;
+}
+.top-left {
+    grid-area: top-left;
+    background-color: rgba(107, 177, 177, 0.75);
+    border-top-left-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-right {
+    grid-area: top-right;
+    border-top-right-radius: 12px;
+    background-color: rgba(111, 120, 178, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-left {
+    grid-area: bottom-left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-right {
+    grid-area: bottom-right;
+    background-color: rgba(164, 94, 185, 0.75);
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media only screen and (min-width:900px) and (min-device-width: 900px) {
+}
+
+@media only screen and (max-device-width: 900px), (max-width:900px) {
+}
