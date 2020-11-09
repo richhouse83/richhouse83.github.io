@@ -162,6 +162,9 @@ a:hover {
         grid-gap: 0px;
         padding: 2rem 0 0 0;
     }
+    .demopics {
+        width: 70%;
+    }
     .navbar {
         font-size: 1rem;
         height: 2rem;
@@ -191,8 +194,8 @@ a:hover {
     }
 
 }
-@media only screen and (max-width: 640px), (max-device-width: 320px) {
-    .navbar, .demopics {
+@media only screen and (max-width: 640px), (max-device-width: 640px) {
+    .navbar {
         visibility: hidden;
         position: fixed;
     }
