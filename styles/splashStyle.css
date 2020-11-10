@@ -92,7 +92,7 @@ a {
 @media only screen and (min-width:900px) and (min-device-width: 900px) {
     .loaded .splashContainer {
         transform-origin: center;
-        animation: fade 4s;
+        //animation: fade 4s;
     }
     .loaded .top-left {
         transform-origin: right; 
@@ -110,6 +110,9 @@ a {
     .loaded h1, .loaded h3 {
         transition: opacity 2s 3.5s;
         opacity: 1;
+    }
+    .loaded .secondTransition {
+        animation: spin 1s 5.5s;
     }
     
     @keyframes fade {
@@ -129,11 +132,49 @@ a {
         0% {transform: scaleY(0) scaleX(0);}
         100% {transform: scaleY(1) scaleX(1);}
     }
+    @keyframes spin {
+        0% {transform-origin: center; transform: rotate(0deg);}
+        20% {transform-origin: center; transform: rotate(-15deg);}
+        100% {transform-origin: center; transform: rotate(360deg);}
+    }
 }
 
 @media only screen and (max-device-width: 900px), (max-width:900px) {
     h1, h3 {
+        opacity: 0;
+        transform: scaleX(0); 
+        background-color: snow; 
+        color: transparent;
+        transform-origin: left;
+    }
+    .loaded .firstTransition {       
         opacity: 1;
+        transform: scaleX(1);
+        background-color: transparent; 
+        color: snow;
+        transition: transform 1s ease-out , background-color 1s 1s, color 1s 1s;    
+    }
+    .loaded .secondTransition {
+        opacity: 1;
+        transform: scaleX(1);
+        background-color: transparent; 
+        color: snow;
+        transition: transform 1s ease-out 1s, background-color 1s 2s, color 1s 2s;
+        animation: spin 1s 5s;
+    }
+    .loaded .thirdTransition {
+        opacity: 1;
+        transform: scaleX(1);
+        background-color: transparent; 
+        color: snow;
+        transition: transform 1s ease-out 3s, background-color 1s 4s, color 1s 4s;
+    }
+    .loaded .fourthTransition {
+        opacity: 1;
+        transform: scaleX(1);
+        background-color: transparent; 
+        color: snow;
+        transition: transform 1.5s ease-out 2s, background-color 1s 3.5s, color 1s 3s;
     }
     .splashContainer {
         width: 100%;
@@ -143,14 +184,24 @@ a {
     .top-left, .top-right, .bottom-left, .bottom-right {
         border-radius: 0px;
     }
+
+    @keyframes spin {
+        0% {transform-origin: center; transform: rotate(0deg);}
+        20% {transform-origin: center; transform: rotate(-15deg);}
+        100% {transform-origin: center; transform: rotate(360deg);}
+    }
 }
 
 @media only screen and (max-device-width: 630px), (max-width: 640px) {
     .splashContainer {
+        width: 100%;
         grid-template-areas: 
         "top-left"
         "top-right"
         "bottom-left"
         "bottom-right";
+    }
+    h1, h3 {
+        font-size: 1.5rem;
     }
 }
