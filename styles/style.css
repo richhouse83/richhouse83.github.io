@@ -79,7 +79,7 @@ a:hover {
     'welcome experience experience'
     'projects projects projects'
     'projects projects projects';
-    grid-gap: 10px;
+    grid-gap: 2px;
     padding-bottom: 6%;
 }
 .welcome {

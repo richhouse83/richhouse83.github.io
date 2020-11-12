@@ -90,10 +90,6 @@ a {
 
 
 @media only screen and (min-width:900px) and (min-device-width: 900px) {
-    .loaded .splashContainer {
-        transform-origin: center;
-        //animation: fade 4s;
-    }
     .loaded .top-left {
         transform-origin: right; 
         animation: growLeft 2s;
@@ -114,10 +110,14 @@ a {
     .loaded .secondTransition {
         animation: spin 1s 5.5s;
     }
+    .fade .splashContainer {
+        animation: fade 2s;
+        opacity: 0;
+    }
     
     @keyframes fade {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {opacity: 1;}
+        to {opacity: 0;}
     }
     @keyframes growLeft {
         0% {transform: scaleX(0);}
