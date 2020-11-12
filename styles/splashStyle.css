@@ -85,10 +85,14 @@ a {
     justify-content: center;
 }
 
-
-
-
-
+.fade .splashContainer {
+    animation: fade 2s;
+    opacity: 0;
+}
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
 @media only screen and (min-width:900px) and (min-device-width: 900px) {
     .loaded .top-left {
         transform-origin: right; 
@@ -110,15 +114,8 @@ a {
     .loaded .secondTransition {
         animation: spin 1s 5.5s;
     }
-    .fade .splashContainer {
-        animation: fade 2s;
-        opacity: 0;
-    }
     
-    @keyframes fade {
-        from {opacity: 1;}
-        to {opacity: 0;}
-    }
+    
     @keyframes growLeft {
         0% {transform: scaleX(0);}
         100% {transform: scaleX(1);}
@@ -184,6 +181,7 @@ a {
     .top-left, .top-right, .bottom-left, .bottom-right {
         border-radius: 0px;
     }
+    
 
     @keyframes spin {
         0% {transform-origin: center; transform: rotate(0deg);}
@@ -205,3 +203,4 @@ a {
         font-size: 1.5rem;
     }
 }
+
