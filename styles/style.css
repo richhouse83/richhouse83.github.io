@@ -1,211 +1,229 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-    font-size: 32px;
-    color: gainsboro;
+  font-size: 32px;
+  color: gainsboro;
 }
 body {
-    margin: 0 auto;
-    background-image: url('../images/background\ website\ 1\ \ \ Zellox.gif');
-    background-attachment: fixed;
-    position: relative;
-    font-size: 0.5rem;
+  margin: 0 auto;
+  background-image: url("../images/background\ website\ 1\ \ \ Zellox.gif");
+  background-attachment: fixed;
+  position: relative;
+  font-size: 0.5rem;
 }
 div {
-    padding: 10px;
+  padding: 10px;
 }
-h1, h2, h3, h4 {
-    font-family: 'Fjalla One', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fjalla One", sans-serif;
 }
 p {
-    font-family: 'Cantarell', sans-serif;
+  font-family: "Cantarell", sans-serif;
 }
 a {
-    text-decoration: none;
-    color: gainsboro;
-    transition: color 0.5s, font-size 0.5s;
+  text-decoration: none;
+  color: gainsboro;
+  transition: color 0.5s, font-size 0.5s;
 }
 a:hover {
-    color: rgb(128, 191, 255);
+  color: rgb(128, 191, 255);
 }
-.navbar, .contact {
-    width: 100%;
-    height: 1.2rem;
-    background-color: snow;
-    color: slategray;
-    font-family: 'Canterell', sans-serif;
-    position: fixed;
-    z-index: 10;
+.navbar,
+.contact {
+  width: 100%;
+  height: 1.2rem;
+  background-color: snow;
+  color: slategray;
+  font-family: "Canterell", sans-serif;
+  position: fixed;
+  z-index: 10;
 }
 .navbar {
-    text-align: right;
+  text-align: right;
 }
-.navbar a, .contact a {
-    color: slategray;
+.navbar a,
+.contact a {
+  color: slategray;
 }
-.navbar a:hover, .contact a:hover {
-    color: rgb(128, 191, 255); 
+.navbar a:hover,
+.contact a:hover {
+  color: rgb(128, 191, 255);
 }
 .contact {
-    padding-top: 5px;
-    bottom: 0px;
-    transition: height 0.3s, font-size 0.2s ease 0.2s, text-align 0.3s;
+  padding-top: 5px;
+  bottom: 0px;
+  transition: height 0.3s, font-size 0.2s ease 0.2s, text-align 0.3s;
 }
 .contact p {
-    display: inline;
+  display: inline;
 }
 .contact:hover {
-    height: 6rem;
-    text-align: center;
-    font-size: 0.5rem;
+  height: 6.4rem;
+  text-align: center;
+  font-size: 0.5rem;
 }
 .contact:hover p {
-    display: block;
-    line-height: 0.3rem;
+  display: block;
+  line-height: 0.3rem;
 }
 .mobilecontact {
-    visibility: hidden;
-    position: fixed;
+  visibility: hidden;
+  position: fixed;
 }
 .container {
-    position: relative;
-    padding-top: 6%;
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-areas:
-    'about experience experience'
-    'welcome experience experience'
-    'projects projects projects'
-    'projects projects projects';
-    grid-gap: 2px;
-    padding-bottom: 6%;
+  position: relative;
+  padding-top: 6%;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "about experience experience"
+    "welcome experience experience"
+    "projects projects projects"
+    "projects projects projects";
+  grid-gap: 2px;
+  padding-bottom: 6%;
 }
 .welcome {
-    grid-area: welcome;
-    text-align: center;
-    font-family: 'Fjalla One', sans-serif;
+  grid-area: welcome;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
 }
-.welcome h1  {
-    font-size: 2rem;
+.welcome h1 {
+  font-size: 2rem;
 }
 .welcome:hover {
-    background-color: snow;
-    color: darkslategray;
+  background-color: snow;
+  color: darkslategray;
 }
 .about {
-    grid-area: about;
-    background-color: rgba(107, 177, 177, 0.75);
-    border-top-left-radius: 12px;
+  grid-area: about;
+  background-color: rgba(107, 177, 177, 0.75);
+  border-top-left-radius: 12px;
 }
 .about:hover {
-    background-color: rgba(107, 177, 177, 0.9);
+  background-color: rgba(107, 177, 177, 0.9);
 }
 .experience {
-    grid-area: experience;
-    border-top-right-radius: 12px;
-    background-color: rgba(111, 120, 178, 0.75);
+  grid-area: experience;
+  border-top-right-radius: 12px;
+  background-color: rgba(111, 120, 178, 0.75);
 }
 .experience:hover {
-    background-color: rgba(111, 120, 178, 0.9);
+  background-color: rgba(111, 120, 178, 0.9);
 }
 .projects {
-    grid-area: projects;
-    background-color: rgba(164, 94, 185, 0.75);
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+  grid-area: projects;
+  background-color: rgba(164, 94, 185, 0.75);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 .projects:hover {
-    background-color: rgba(164, 94, 185, 0.9);
-
+  background-color: rgba(164, 94, 185, 0.9);
 }
 .demopics {
-    width: 15rem;
-    opacity: 0.8;
-    transition: 0.5s;
+  width: 15rem;
+  opacity: 0.8;
+  transition: 0.5s;
 }
 .demopics:hover {
-    opacity: 1;
+  opacity: 1;
 }
-.about, .experience, .projects, .welcome {
-    transition: background-color 1.3s, color 1.3s ease 0.5s;
+.about,
+.experience,
+.projects,
+.welcome {
+  transition: background-color 1.3s, color 1.3s ease 0.5s;
 }
-@media only screen and (min-width:900px) and (min-device-width: 900px) {
-    .container h4 a:hover {
-        border-bottom: 3px solid snow;
-    }
-    .contact a:hover {
-        border-bottom: 3px solid slategray;
-    }
-    .navbar a:hover {
-        border-top: 3px solid slategray;
-    }
-    .demopics:hover {
-        width: 16rem;
-        transform: rotate(-4deg);
-        box-shadow: -6px 6px #2c2c2c;
-    }
-    
+.githubLink {
+  font-size: 1rem;
+  padding-left: 2rem;
 }
-@media only screen and (max-device-width: 900px), (max-width:900px) {
-    body {
-        font-size: 1rem;
-    }
-    .container {
-        width: 100%;
-        grid-template-areas: 
-        "welcome"
-        "about"
-        "experience"
-        "projects";
-        grid-gap: 0px;
-        padding: 2rem 0 0 0;
-    }
-    .demopics {
-        width: 70%;
-    }
-    .navbar {
-        font-size: 1rem;
-        height: 2rem;
-    }
-    .contact, .contact:hover, .contact p, .contact:hover p {
-        text-align: center;
-        height: 100%;
-        position: relative;
-        font-size: 1rem;
-        line-height: 0.4rem;
-        padding-top: 6px;
-        display: block;
-    }
-    .mobilecontact {
-        margin-top: 5px;
-        visibility: visible;
-        position: relative;
-    }
-    .welcome, .about, .experience, .projects {
-        border-radius: 0px;
-        text-align: center;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 ;
-    }
 
+@media only screen and (min-width: 900px) and (min-device-width: 900px) {
+  .container h4 a:hover {
+    border-bottom: 3px solid snow;
+  }
+  .contact a:hover {
+    border-bottom: 3px solid slategray;
+  }
+  .navbar a:hover {
+    border-top: 3px solid slategray;
+  }
+  .demopics:hover {
+    width: 16rem;
+    transform: rotate(-4deg);
+    box-shadow: -6px 6px #2c2c2c;
+  }
+}
+@media only screen and (max-device-width: 900px), (max-width: 900px) {
+  body {
+    font-size: 1rem;
+  }
+  .container {
+    width: 100%;
+    grid-template-areas:
+      "welcome"
+      "about"
+      "experience"
+      "projects";
+    grid-gap: 0px;
+    padding: 2rem 0 0 0;
+  }
+  .demopics {
+    width: 70%;
+  }
+  .navbar {
+    font-size: 1rem;
+    height: 2rem;
+  }
+  .contact,
+  .contact:hover,
+  .contact p,
+  .contact:hover p {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    font-size: 1rem;
+    line-height: 0.4rem;
+    padding-top: 6px;
+    display: block;
+  }
+  .mobilecontact {
+    margin-top: 5px;
+    visibility: visible;
+    position: relative;
+  }
+  .welcome,
+  .about,
+  .experience,
+  .projects {
+    border-radius: 0px;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 @media only screen and (max-width: 640px), (max-device-width: 640px) {
-    .navbar {
-        visibility: hidden;
-        position: fixed;
-    }
-    .container {
-        padding-top: 0px;
-    }
-    .welcome h1 {
-        font-size: 1.5rem;
-    }
-    .contact p, .contact:hover p {
-        font-size: 0.8rem;
-    }
+  .navbar {
+    visibility: hidden;
+    position: fixed;
+  }
+  .container {
+    padding-top: 0px;
+  }
+  .welcome h1 {
+    font-size: 1.5rem;
+  }
+  .contact p,
+  .contact:hover p {
+    font-size: 0.8rem;
+  }
 }
