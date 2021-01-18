@@ -42,7 +42,15 @@ a:hover {
   position: fixed;
   z-index: 10;
 }
-.navbar {
+.navbar .brand {
+  text-align: left;
+  display: inline;
+  font-family: "Fjalla One", sans-serif;
+}
+.navbar .nav {
+  padding: 2px;
+  display: inline;
+  float: right;
   text-align: right;
 }
 .navbar a,
@@ -115,6 +123,9 @@ a:hover {
 }
 .experience:hover {
   background-color: rgba(111, 120, 178, 0.9);
+}
+.experience-text li {
+  padding-bottom: 40px;
 }
 .projects {
   grid-area: projects;
