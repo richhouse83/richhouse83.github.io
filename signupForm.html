@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>User Signup</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/formstyle.css" />
+</head>
+
+<body>
+    <div class="container-sm bg-light text-dark cont">
+        <h2>signup</h2>
+        <form method="post" action='#'>
+            <label for="username">Username</label>
+            <input type="text" id="username" name='username' class="username" required data-bs-toggle="tooltip" data-bs-placement="top" title="Username, letters or numbers">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email"  onkeyup="checkemail();"  required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" data-bs-toggle="tooltip" data-bs-placement="top" title="Email Address">
+            <label for="password">Choose Password</label>
+            <input type="password" name="password" id="password"  onkeyup='checkpassword();' minlength="8" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Password - at least 8 characters, including at lease 1 capital letter, 1 digit and/or 1 special character (!@£$%^&*\())">
+            <label for="check">Retype Password</label>
+            <input type="password" id="check" name="check"  onkeyup='checkMatching();' required>
+            <input type="submit" value="submit" data-bs-toggle="tooltip" data-bs-placement="top" title="Must match above">
+            
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous">
+        
+    </script>
+    <script>
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/  
+        const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        const password = document.getElementById('password');
+        const email = document.getElementById('email');
+        const check = document.getElementById('check');
+        function checkpassword(){
+            if (passwordRegex.test(password.value)) {
+                password.classList.add('pass')
+                password.classList.remove('fail')
+            } else if (password.value.length !== 0) {
+                password.classList.add('fail')
+                password.classList.remove('pass')
+            } else password.classList.remove('fail')
+        }
+        function checkemail() {
+                if (emailRegex.test(email.value)) {
+                    console.log('passing')
+                    email.classList.add('pass')
+                    email.classList.remove('fail')
+                } else if (email.value.length !== 0) {
+                    email.classList.add('fail')
+                    email.classList.remove('pass')
+                } else email.classList.remove('fail');
+            }
+        function checkMatching() {
+            if (password.value === check.value && passwordRegex.test(password.value)) {
+                check.classList.add('pass');
+                check.classList.remove('fail');
+            } else if (check.value.length !== 0) {
+                check.classList.add('fail');
+                check.classList.remove('pass');
+            } else check.classList.remove('fail');
+        }
+    </script>
+
+    
+</body>
+
+</html>
