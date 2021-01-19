@@ -1,3 +1,14 @@
+const usernames = [
+  "richhouse83",
+  "richhouse",
+  "a",
+  "abc",
+  "user1",
+  "user123",
+  "notARealUser",
+  "qwerty",
+  "iAmGod",
+];
 const tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
@@ -18,14 +29,30 @@ const username = document.getElementById("username");
 const userPass = document.getElementById("username-pass");
 let passArray = [false, false, false, false];
 function checkusername() {
-  if (username.value.length) {
-    userPass.classList.remove("hidden");
-    userPass.classList.add("pass");
-    userPass.classList.remove("fail");
-    passArray[0] = true;
-    if (passArray.every((item) => item === true)) {
-      submit.disabled = false;
+  if (username.value.length > 4) {
+    if (usernames.every((user) => user !== username.value)) {
+      userPass.classList.remove("hidden");
+      userPass.classList.add("pass");
+      userPass.classList.remove("fail");
+      passArray[0] = true;
+      if (passArray.every((item) => item === true)) {
+        submit.value = "OK! Submit";
+        submit.disabled = false;
+      }
+    } else {
+      userPass.classList.remove("pass");
+      userPass.classList.add("fail");
+      passArray[0] = false;
+      submit.value = "Complete Form";
+      submit.disabled = true;
     }
+  } else if (username.value.length > 0) {
+    userPass.classList.remove("hidden");
+    userPass.classList.remove("pass");
+    userPass.classList.add("fail");
+    passArray[0] = false;
+    submit.value = "Complete Form";
+    submit.disabled = true;
   } else {
     userPass.classList.add("hidden");
     submit.disabled = true;
@@ -38,6 +65,7 @@ function checkemail() {
     emailPass.classList.remove("fail");
     passArray[1] = true;
     if (passArray.every((item) => item === true)) {
+      submit.value = "OK! Submit";
       submit.disabled = false;
     }
   } else if (email.value.length !== 0) {
@@ -45,6 +73,7 @@ function checkemail() {
     emailPass.classList.add("fail");
     emailPass.classList.remove("pass");
     passArray[1] = false;
+    submit.value = "Complete Form";
     submit.disabled = true;
   } else emailPass.classList.add("hidden");
 }
@@ -55,6 +84,7 @@ function checkpassword() {
     passwordPass.classList.remove("fail");
     passArray[2] = true;
     if (passArray.every((item) => item === true)) {
+      submit.value = "OK! Submit";
       submit.disabled = false;
     }
   } else if (password.value.length !== 0) {
@@ -63,6 +93,7 @@ function checkpassword() {
     passwordPass.classList.remove("pass");
     passArray[2] = false;
     submit.disabled = true;
+    submit.value = "Complete Form";
   } else passwordPass.classList.add("hidden");
 }
 function checkMatching() {
@@ -72,6 +103,7 @@ function checkMatching() {
     checkPass.classList.remove("fail");
     passArray[3] = true;
     if (passArray.every((item) => item === true)) {
+      submit.value = "OK! Submit";
       submit.disabled = false;
     }
   } else if (check.value.length !== 0) {
@@ -80,5 +112,6 @@ function checkMatching() {
     checkPass.classList.remove("pass");
     passArray[3] = true;
     submit.disabled = true;
+    submit.value = "Complete Form";
   } else checkPass.classList.add("hidden");
 }

@@ -16,15 +16,32 @@
     <div class="container-sm bg-light text-dark cont">
         <h2>signup</h2>
         <form method="post" action='#'>
-            <label for="username">Username</label>
-            <input type="text" id="username" name='username' class="username" onkeyup="checkusername();" required data-bs-toggle="tooltip" data-bs-placement="top" title="Username, letters or numbers"><i class="far fa-thumbs-up hidden" id="username-pass"></i>
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="email"  onkeyup="checkemail();"  required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" data-bs-toggle="tooltip" data-bs-placement="top" title="Email Address"><i class="far fa-thumbs-up hidden" id="email-pass"></i>
-            <label for="password">Choose Password</label>
-            <input type="password" name="password" id="password"  onkeyup='checkpassword();' minlength="8" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Password - at least 8 characters, including at lease 1 capital letter, 1 digit and/or 1 special character (!@£$%^&*\())"><i class="far fa-thumbs-up hidden" id="password-pass"></i>
-            <label for="check">Retype Password</label>
-            <input type="password" id="check" name="check"  onkeyup='checkMatching();' required data-bs-toggle="tooltip" data-bs-placement="top" title="Must match above"><i class="far fa-thumbs-up hidden" id="check-pass"></i>
-            <input type="submit" value="submit" disabled="true" id="submit">
+            <div class="input-container">
+                <label for="username">Username</label>
+                <div>
+                    <input type="text" id="username" name='username' class="username" onkeyup="checkusername();" required data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username, at least 5 characters" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden" id="username-pass"></i>
+                </div>
+                <label for="email">Email Address</label>
+                <div>
+                    <input type="text" id="email" name="email" onkeyup="checkemail();" required
+                        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Email Address" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden"
+                        id="email-pass"></i>
+                </div>
+                <label for="password">Choose Password</label>
+                <div>
+                    <input type="password" name="password" id="password" onkeyup='checkpassword();' minlength="8" required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Password - at least 8 characters, including at least 1 capital letter, 1 numeric digit and/or 1 special character" data-bs-trigger="focus"><i
+                        class="far fa-thumbs-up hidden" id="password-pass"></i>
+                </div>
+                <label for="check">Retype Password</label>
+                <div>
+                    <input type="password" id="check" name="check" onkeyup='checkMatching();' required data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Must match above" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden" id="check-pass"></i>
+                </div>
+            </div>
+            <input type="submit" value="Complete Form" disabled="true" id="submit">
             
         </form>
     </div>

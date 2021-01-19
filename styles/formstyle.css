@@ -18,3 +18,14 @@
   visibility: hidden;
   position: fixed;
 }
+.input-container {
+  display: grid;
+  max-width: 50%;
+  min-height: 10rem;
+  grid-template-columns: 1fr 2fr;
+  align-content: space-between;
+}
+
+.fa-thumbs-up {
+  margin-left: 15px;
+}
