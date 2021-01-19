@@ -1,7 +1,20 @@
 .pass {
-  background-color: lightgreen;
+  color: forestgreen;
+  visibility: visible;
+  position: relative;
+  transition: transform 300ms;
 }
 
 .fail {
-  background-color: tomato;
+  color: tomato;
+  visibility: visible;
+  position: relative;
+  transform: rotate(180deg);
+
+  transition: transform 300ms;
+}
+
+.hidden {
+  visibility: hidden;
+  position: fixed;
 }
