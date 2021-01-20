@@ -18,10 +18,12 @@ div {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "Fjalla One", sans-serif;
 }
-p {
+p,
+li {
   font-family: "Cantarell", sans-serif;
 }
 a {
@@ -50,12 +52,13 @@ a:hover {
   font-family: "Canterell", sans-serif;
   position: fixed;
   top: 0;
-  /* visibility: hidden; */
   text-align: right;
   z-index: 9;
   transition: top 300ms;
 }
-
+#contact-link {
+  cursor: pointer;
+}
 .navbar .brand {
   text-align: left;
   display: inline;
@@ -95,9 +98,10 @@ a:hover {
   display: block;
   line-height: 0.3rem;
 }
-.mobilecontact {
+.mobile-contact {
   visibility: hidden;
   position: fixed;
+  z-index: 10;
 }
 .container {
   position: relative;
@@ -153,10 +157,21 @@ a:hover {
 .projects:hover {
   background-color: rgba(164, 94, 185, 0.9);
 }
+.project-item {
+  padding-bottom: 0.7rem;
+  border-top: 1px solid snow;
+}
+.date {
+  font-family: "Cantarell", sans-serif;
+}
 .demopics {
   width: 15rem;
   opacity: 0.8;
   transition: 0.5s;
+}
+.tech-grid {
+  display: grid;
+  grid-template-areas: "tech tech tech";
 }
 .demopics:hover {
   opacity: 1;
@@ -225,11 +240,6 @@ a:hover {
     padding-top: 6px;
     display: block;
   }
-  .mobilecontact {
-    margin-top: 5px;
-    visibility: visible;
-    position: relative;
-  }
   .welcome,
   .about,
   .experience,
@@ -243,7 +253,7 @@ a:hover {
     margin: 0;
   }
 }
-@media only screen and (max-width: 640px), (max-device-width: 640px) {
+@media only screen and (max-width: 650px), (max-device-width: 650px) {
   .navbar,
   .contact-top {
     visibility: hidden;
@@ -258,6 +268,21 @@ a:hover {
   .contact p,
   .contact:hover p {
     font-size: 0.8rem;
+  }
+  .tech-grid {
+    grid-template-areas: "tech tech";
+  }
+  .mobile-contact {
+    background-color: snow;
+    color: darkslategray;
+    border-radius: 100%;
+    margin-top: 5px;
+    visibility: visible;
+    top: 10px;
+    right: 5px;
+  }
+  .mobile-contact a {
+    color: darkslategray;
   }
 }
 

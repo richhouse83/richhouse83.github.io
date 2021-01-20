@@ -11,7 +11,7 @@
     <body>
         <div class = "navbar" id="navbar">
             <div class ="brand">R<i class="fas fa-code"></i>H</div>
-            <div class = "nav"><a href="#about">about</a> / <a href="#experience">experience</a> / <a href="#projects">projects</a> /  <a href="#contact" id="contact-link">contact</a></div>
+            <div class = "nav"><a href="#about">about</a> / <a href="#experience">experience</a> / <a href="#projects">projects</a> /  <a id="contact-link">contact</a></div>
         </div>
         <div class="contact-top" id="contact-top">
             <p><i class="fas fa-envelope-open"></i> <a href="mailto:rich@richhouse.co.uk">rich@richhouse.co.uk</a></p>
@@ -23,6 +23,7 @@
                     target="_blank">facebook</a></p>
             <p><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/" target="_blank">github</a></p>
         </div>
+        <div class="mobile-contact"><a href="#contact"><i class="fas fa-envelope-open"></i></a></div>
         <div class = 'container'>
             <div class = 'welcome'>
                 <h1>Rich House</h1>
@@ -79,60 +80,111 @@
                 <h2>Current and Former Projects</h2>
                 <p>Below are just some of the more recent projects I have worked on.</p>
                 <ul>
-                    <li>
-                        <h4><a href="http://salty-comb.surge.sh/" target='_blank'>Zoom Quiz Generator</a>
+                    <li class="project-item">
+                        <h4><a href="http://salty-comb.surge.sh/" target='_blank'>Zoom Quiz Generator</a> <span class="date">-- January 2021</span>
                             <p><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/zoom-quiz"
                                     target="_blank">Source</a></p>
                         </h4>
                         <a href="http://salty-comb.surge.sh/" target='_blank'><img class='demopics'
                                 src='images/zoom-quiz.png' /></a>
                         <p>A simple zoom quiz generator, built using React, Axios and implementing use of the <a href="https://opentdb.com/" target="_blank">Open Trivia Database Api</a>.</p>
+                        <h5>Technologies Used</h5>
+                        <ul class="tech-grid">
+                            <li class="tech">JavaScript</li>
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">React</li>
+                            <li class="tech">Axios</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><a href = "https://richhouse83.github.io/marioClone/" target = '_blank'>Mario Clone using procedural generation of levels.</a>
+                    <li class="project-item">
+                        <h4><a href = "https://richhouse83.github.io/marioClone/" target = '_blank'>Mario Clone using procedural generation of levels</a> <span class="date">-- Q4 2020</span>
                         <p><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/marioClone" target="_blank">Source</a></p>
                         </h4>
                         <a href = "https://richhouse83.github.io/marioClone/" target = '_blank'><img class = 'demopics' src = 'images/marioclone.jpeg'/></a>
                         <p>Written using Phaser.js, this project has been to experiment with Phaser, procedural generation and game creation. Purely for demonstration purposes.</p>
+                        <h5>Technologies Used</h5>
+                        <ul class="tech-grid">
+                            <li class="tech">JavaScript</li>
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">Phaser.js</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><i class="fab fa-github-square"></i> <a href = "https://github.com/richhouse83/studyProjects/tree/main/covidGig/gigsafe" target = '_blank'>GigSafe React site</a></h4>
+                    <li class="project-item">
+                        <h4><i class="fab fa-github-square"></i> <a href = "https://github.com/richhouse83/studyProjects/tree/main/covidGig/gigsafe" target = '_blank'>GigSafe React site</a> <span class="date">-- September 2020</span></h4>
                         <a href = "https://github.com/richhouse83/studyProjects/tree/main/covidGig/gigsafe" target = '_blank'><img src = 'images/gigsafe.jpeg' class = 'demopics'/></a>
                         <p>Proof of concept using React, Express and MongoDB, this is a basic Covid tracing system, which would track and alert gig attendees of possible Covid transmission. Click <a href="https://youtu.be/AYawDEZ3mZs" target="_blank">here</a> for a video demonstration. Made as the final project of the CS50 course</p>
+                        <h5>Technologies Used</h5>
+                        <ul class="tech-grid">
+                            <li class="tech">JavaScript</li>
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">MongoDb</li>
+                            <li class="tech">Express</li>
+                            <li class="tech">React</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><a href = "http://theroadiecookbook.com" target="_blank">The Roadie Cookbook</a></h4>
+                    <li class="project-item">
+                        <h4><a href = "http://theroadiecookbook.com" target="_blank">The Roadie Cookbook</a> <span class="date">-- Q2 2020 (ongoing)</span></h4>
                         <a href = "http://theroadiecookbook.com" target = "_blank"><img src = "images/trc1.jpeg" class = 'demopics' /></a>
                         <p>A cookbook site built with Wordpress for a charity project being worked on by myself and a few friends.</p>
+                        <h5>Technologies Used</h5>
+                        <ul class="tech-grid">
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">WordPress</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/pong" target='_blank' >Pong Clone</a></h4>
+                    <li class="project-item">
+                        <h4><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/pong" target='_blank' >Pong Clone</a> <span class ='date'>-- September 2020</span></h4>
                         <a href="https://github.com/richhouse83/pong" target="_blank"><img class = 'demopics' src = 'images/pong.jpeg' /></a>
-                        <p>Written using Lua's Love framework, this is a basic Pong game which adapts it's difficulty as you win. Adapted from the CS50 Game Dev track</p>
+                        <p>Written using Lua's LÖVE framework, this is a basic Pong game which adapts it's difficulty as you win. Adapted from the CS50 Game Dev track</p>
+                        <h5>Technologies Used</h5>
+                        <ul class="tech-grid">
+                            <li class="tech">Lua</li>
+                            <li class="tech">LÖVE</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/pokemon-battler-2" target='_blank'>Pokemon Battler CLI Game</a></h4>
+                    <li class="project-item">
+                        <h4><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/pokemon-battler-2" target='_blank'>Pokemon Battler CLI Game</a> <span class="date">-- January 2021</span></h4>
                         <a href="https://github.com/richhouse83/pokemon-battler-2" target="_blank"><img class='demopics' src='images/pokemon-battler.png' /></a>
                         <p>A text based Pokemon Battling game making use of Axios, Inquirer, and the <a href="https://pokeapi.co/" target="_blank">PokeAPI API</a></p>
+                        <ul class="tech-grid">
+                            <li class="tech">JavaScript</li>
+                            <li class="tech">Axios</li>
+                            <li class="tech">Inquirer</li>
+                            <li class="tech">PokeAPI</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><a href="https://richhouse83.github.io/bugInvaders/index.html" target="_blank">Bug Invaders</a>
+                    <li class="project-item">
+                        <h4><a href="https://richhouse83.github.io/bugInvaders/index.html" target="_blank">Bug Invaders</a> <span class= "date">-- October 2020</span>
                             <p><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/bugInvaders" target="_blank">Source</a></p>
                         </h4>
                         <a href="https://richhouse83.github.io/bugInvaders/index.html" target="_blank"><img class='demopics' src='./images/buginvaders2.jpeg' /></a>
                         <p>Space Invaders copy, extended from a Codecademy project.</p>
+                        <ul class="tech-grid">
+                            <li class="tech">JavaScript</li>
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">Phaser.js</li>
+                        </ul>
                     </li>
-                    <li>
-                        <h4><a href = "solarsystem.html" target="_blank">VR Solar System</a></h4>
+                    <li class="project-item">
+                        <h4><a href = "solarsystem.html" target="_blank">VR Solar System</a> <span class="date">-- November 2020</span></h4>
                         <p><i class="fab fa-github-square"></i> <a href="https://github.com/richhouse83/richhouse83.github.io/blob/master/solarsystem.html" target="_blank">Source</a></p>
                         <a href = "solarsystem.html" target = "_blank"><img src = "images/solarsystem.jpeg" class = 'demopics' /></a>
                         <p>Solar System model built using A-Frame VR. A work in progress.</p>
+                        <ul class="tech-grid">
+                            <li class="tech">HTML</li>
+                            <li class="tech">CSS</li>
+                            <li class="tech">A-Frame</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="contact">
-            <div class="mobilecontact">contact details</div>
+        <div class="contact" id="contact">
             <p><i class="fas fa-envelope-open"></i> <a href="mailto:rich@richhouse.co.uk">rich@richhouse.co.uk</a></p>
             <p><i class="fas fa-phone-square-alt"></i> <a href="tel:+447793020106"> +447793020106</a></p> 
             <p><i class="fab fa-linkedin"></i> <a href="http://www.linkedin.com/in/rich-house-3ab5553a" target="_blank">linkedIn</a></p> 
