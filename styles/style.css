@@ -103,6 +103,9 @@ a:hover {
   position: fixed;
   z-index: 10;
 }
+.spin-hover:hover {
+  animation: spin 4s;
+}
 .container {
   position: relative;
   padding-top: 6%;
@@ -198,7 +201,8 @@ a:hover {
   .contact a:hover {
     border-bottom: 3px solid slategray;
   }
-  .navbar a:hover {
+  .navbar a:hover,
+  .contact-top a:hover {
     border-top: 3px solid slategray;
   }
   .demopics:hover {
