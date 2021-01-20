@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>User Signup</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/formstyle.css" />
+    <script src="https://kit.fontawesome.com/43ee9257b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body class= "text-center">
+    <main class='form-signup'>
+        <div>
+            <h2>Sign up</h2>
+            <form method="get" action='success.html'>
+                <div class="input-container">
+                    <div>
+                        <input type="text" id="username" placeholder="Username" name='username' class="username" onkeyup="checkusername();" required data-bs-toggle="tooltip" data-bs-placement="left" title="Username, at least 5 characters" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden" id="username-pass"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="email" name="email" placeholder="Email Address" onkeyup="checkemail();" required
+                            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Email Address" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden"
+                            id="email-pass"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="Choose Password" id="password" onkeyup='checkpassword();' minlength="8" required
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Password - at least 8 characters, including at least 1 capital letter and 1 numerical digit" data-bs-trigger="focus"><i
+                            class="far fa-thumbs-up hidden" id="password-pass"></i>
+                    </div>
+                    <div>
+                        <input type="password" id="check" name="check" placeholder="Retype password" onkeyup='checkMatching();' required data-bs-toggle="tooltip"
+                            data-bs-placement="left" title="Must match above" data-bs-trigger="focus"><i class="far fa-thumbs-up hidden" id="check-pass"></i>
+                    </div>
+                </div>
+                <input type="submit" value="Complete Form" disabled="true" id="submit">
+                <p><a href="https://richhouse83.github.io/main.html">Back to richhouse.co.uk</a></p>
+            </form>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous">
+        
+    </script>
+    <script src = "./scripts/form-script.js">
+        
+    </script>
+
+    
+</body>
+
+</html>

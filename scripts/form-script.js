@@ -32,12 +32,12 @@ let passArray = [false, false, false, false];
 function checkusername() {
   if (username.value.length > 4) {
     if (usernames.every((user) => user !== username.value)) {
-      pass(userPass, 0);
+      pass(userPass, 0, username);
     } else {
-      fail(userPass, 0);
+      fail(userPass, 0, username);
     }
   } else if (username.value.length > 0) {
-    fail(userPass, 0);
+    fail(userPass, 0, username);
   } else {
     userPass.classList.add("hidden");
     submit.disabled = true;
@@ -46,44 +46,48 @@ function checkusername() {
 
 function checkemail() {
   if (emailRegex.test(email.value)) {
-    pass(emailPass, 1);
+    pass(emailPass, 1, email);
   } else if (email.value.length !== 0) {
-    fail(emailPass, 1);
+    fail(emailPass, 1, email);
   } else emailPass.classList.add("hidden");
 }
 
 function checkpassword() {
   if (passwordRegex.test(password.value)) {
-    pass(passwordPass, 2);
+    pass(passwordPass, 2, password);
   } else if (password.value.length !== 0) {
-    fail(passwordPass, 2);
+    fail(passwordPass, 2, password);
   } else passwordPass.classList.add("hidden");
 }
 
 function checkMatching() {
   if (password.value === check.value && passwordRegex.test(password.value)) {
-    pass(checkPass, 3);
+    pass(checkPass, 3, check);
   } else if (check.value.length !== 0) {
-    fail(checkPass, 3);
+    fail(checkPass, 3, check);
   } else checkPass.classList.add("hidden");
 }
 
-function pass(element, arrayNo) {
+function pass(element, arrayNo, input) {
   element.classList.remove("hidden");
   element.classList.add("pass");
   element.classList.remove("fail");
   passArray[arrayNo] = true;
+  input.classList.add("pass-focus");
+  input.classList.remove("fail-focus");
   if (passArray.every((item) => item === true)) {
     submit.value = "OK! Submit";
     submit.disabled = false;
   }
 }
 
-function fail(element, arrayNo) {
+function fail(element, arrayNo, input) {
   element.classList.remove("hidden");
   element.classList.add("fail");
   element.classList.remove("pass");
-  passArray[arrayNo] = true;
+  passArray[arrayNo] = false;
+  input.classList.add("fail-focus");
+  input.classList.remove("pass-focus");
   submit.disabled = true;
   submit.value = "Complete Form";
 }
