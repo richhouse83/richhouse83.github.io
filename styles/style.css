@@ -279,10 +279,11 @@ a:hover {
     margin-top: 5px;
     visibility: visible;
     top: 10px;
-    right: 5px;
+    right: 35px;
   }
   .mobile-contact a {
     color: darkslategray;
+    font-size: 1rem;
   }
 }
 
