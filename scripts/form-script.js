@@ -28,90 +28,62 @@ const submit = document.getElementById("submit");
 const username = document.getElementById("username");
 const userPass = document.getElementById("username-pass");
 let passArray = [false, false, false, false];
+
 function checkusername() {
   if (username.value.length > 4) {
     if (usernames.every((user) => user !== username.value)) {
-      userPass.classList.remove("hidden");
-      userPass.classList.add("pass");
-      userPass.classList.remove("fail");
-      passArray[0] = true;
-      if (passArray.every((item) => item === true)) {
-        submit.value = "OK! Submit";
-        submit.disabled = false;
-      }
+      pass(userPass, 0);
     } else {
-      userPass.classList.remove("pass");
-      userPass.classList.add("fail");
-      passArray[0] = false;
-      submit.value = "Complete Form";
-      submit.disabled = true;
+      fail(userPass, 0);
     }
   } else if (username.value.length > 0) {
-    userPass.classList.remove("hidden");
-    userPass.classList.remove("pass");
-    userPass.classList.add("fail");
-    passArray[0] = false;
-    submit.value = "Complete Form";
-    submit.disabled = true;
+    fail(userPass, 0);
   } else {
     userPass.classList.add("hidden");
     submit.disabled = true;
   }
 }
+
 function checkemail() {
   if (emailRegex.test(email.value)) {
-    emailPass.classList.remove("hidden");
-    emailPass.classList.add("pass");
-    emailPass.classList.remove("fail");
-    passArray[1] = true;
-    if (passArray.every((item) => item === true)) {
-      submit.value = "OK! Submit";
-      submit.disabled = false;
-    }
+    pass(emailPass, 1);
   } else if (email.value.length !== 0) {
-    emailPass.classList.remove("hidden");
-    emailPass.classList.add("fail");
-    emailPass.classList.remove("pass");
-    passArray[1] = false;
-    submit.value = "Complete Form";
-    submit.disabled = true;
+    fail(emailPass, 1);
   } else emailPass.classList.add("hidden");
 }
+
 function checkpassword() {
   if (passwordRegex.test(password.value)) {
-    passwordPass.classList.remove("hidden");
-    passwordPass.classList.add("pass");
-    passwordPass.classList.remove("fail");
-    passArray[2] = true;
-    if (passArray.every((item) => item === true)) {
-      submit.value = "OK! Submit";
-      submit.disabled = false;
-    }
+    pass(passwordPass, 2);
   } else if (password.value.length !== 0) {
-    passwordPass.classList.remove("hidden");
-    passwordPass.classList.add("fail");
-    passwordPass.classList.remove("pass");
-    passArray[2] = false;
-    submit.disabled = true;
-    submit.value = "Complete Form";
+    fail(passwordPass, 2);
   } else passwordPass.classList.add("hidden");
 }
+
 function checkMatching() {
   if (password.value === check.value && passwordRegex.test(password.value)) {
-    checkPass.classList.remove("hidden");
-    checkPass.classList.add("pass");
-    checkPass.classList.remove("fail");
-    passArray[3] = true;
-    if (passArray.every((item) => item === true)) {
-      submit.value = "OK! Submit";
-      submit.disabled = false;
-    }
+    pass(checkPass, 3);
   } else if (check.value.length !== 0) {
-    checkPass.classList.remove("hidden");
-    checkPass.classList.add("fail");
-    checkPass.classList.remove("pass");
-    passArray[3] = true;
-    submit.disabled = true;
-    submit.value = "Complete Form";
+    fail(checkPass, 3);
   } else checkPass.classList.add("hidden");
+}
+
+function pass(element, arrayNo) {
+  element.classList.remove("hidden");
+  element.classList.add("pass");
+  element.classList.remove("fail");
+  passArray[arrayNo] = true;
+  if (passArray.every((item) => item === true)) {
+    submit.value = "OK! Submit";
+    submit.disabled = false;
+  }
+}
+
+function fail(element, arrayNo) {
+  element.classList.remove("hidden");
+  element.classList.add("fail");
+  element.classList.remove("pass");
+  passArray[arrayNo] = true;
+  submit.disabled = true;
+  submit.value = "Complete Form";
 }
